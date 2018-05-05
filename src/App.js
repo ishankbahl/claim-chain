@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { ClaimStepper } from "./Components";
-import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <ClaimStepper />
-    );
-  }
-}
+import WrappedComponent from "./componentwrappers";
+import './App.css';
+import { Home } from "./Components"; 
+
+const App = WrappedComponent(Home);
 
 export default App;

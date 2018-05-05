@@ -9,10 +9,11 @@ import PersonPin from "material-ui-icons/PersonPin";
 
 const styles = {
     card: {
-      maxWidth: 345,
+      maxWidth: "345px",
     },
     media: {
       height: 200,
+      width: "100%"
     },
     span: {
         padding: "5px",
@@ -25,6 +26,11 @@ const styles = {
     },
     hospital: {
         float: "right",
+    },
+    profile: {
+        display: "inline-block",
+        paddingRight: "25px",
+        paddingLeft: "25px",
     }
   };
   
@@ -40,7 +46,7 @@ function Profile(props) {
          hospital,
          } = props;
     return (
-        <div>
+        <div className={ classes.profile } >
         <Card className={classes.card}>
             <CardMedia
                 className={classes.media}

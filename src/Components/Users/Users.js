@@ -12,8 +12,8 @@ const styles = {
     paddingRight: 16,
     paddingLeft: 16,
     marginTop: 15,
-    position: "absolute",
-    width: "275px"
+    position: "relative",
+    width: "275px",
   },
   big: {
     fontSize: "50px",
@@ -25,6 +25,11 @@ const styles = {
   },
   span: {
     padding: "5px",
+  },
+  user: {
+    display: "inline-block",
+    paddingRight: "25px",
+    paddingLeft: "25px",
   }
 };
 
@@ -38,7 +43,7 @@ function renderIcon(component){
 function Users(props) {
   const { classes, name, description, Component } = props;
   return (
-    <div>
+    <div className={ classes.user } >
       <Paper className={classes.root} elevation={4}>
         <Typography variant="headline" component="h3">
           {name}
