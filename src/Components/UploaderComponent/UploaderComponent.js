@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import LocalHospital from 'material-ui-icons/LocalHospital';
@@ -12,10 +12,8 @@ const styles = {
   card: {
     maxWidth: '450px',
     margin: '25px',
-    width: '450px'
-  },
-  media: {
-    height: 200
+    width: '356px',
+    height: "350px"
   },
   span: {
     padding: '5px'
@@ -27,13 +25,14 @@ const styles = {
 
 function UploaderComponent(props) {
   const {
-    image,
+    hospitalHash,
     name,
     age,
     timeOfDeath,
     causeOfDeath,
     doctor,
-    hospital
+    hospital,
+    docPublicKey
   } = props.details;
   const classes = props.classes;
   const buttonStyle = {
@@ -53,12 +52,6 @@ function UploaderComponent(props) {
   return (
     <div>
       <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image={image}
-          title="Image of Person"
-          style={{ height: '450px' }}
-        />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h3">
             {name.toUpperCase()}
@@ -73,13 +66,19 @@ function UploaderComponent(props) {
             <b>Cause of Death:</b> {causeOfDeath}
           </Typography>
           <Typography variant="subheading" color="textSecondary">
+            <b>Hospital Hash:</b> {hospitalHash}
+          </Typography>
+          <Typography variant="subheading" color="textSecondary">
             <b>Doctor:</b> {doctor}
           </Typography>
           <Typography variant="subheading" color="textSecondary">
             <b>Hospital :</b> {hospital}
           </Typography>
+          <Typography variant="subheading" color="textSecondary">
+            <b>Public key of Doc :</b> {docPublicKey}
+          </Typography>
           <div className="uploaderAction" style={buttonStyle}>
-            {'Upload Burial Permit'}
+            {'Upload Death Certificate'}
           </div>
         </CardContent>
       </Card>
