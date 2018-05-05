@@ -1,0 +1,276 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "customerAddress",
+				"type": "address"
+			}
+		],
+		"name": "getCustomerDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "hospitalAddress",
+				"type": "address"
+			}
+		],
+		"name": "addHospitals",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "time",
+				"type": "string"
+			},
+			{
+				"name": "place",
+				"type": "string"
+			},
+			{
+				"name": "cause",
+				"type": "string"
+			},
+			{
+				"name": "customerAddress",
+				"type": "address"
+			}
+		],
+		"name": "reportDeath",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "age",
+				"type": "string"
+			},
+			{
+				"name": "customerAddress",
+				"type": "address"
+			},
+			{
+				"name": "policyTaken",
+				"type": "string"
+			},
+			{
+				"name": "nomineeAddress",
+				"type": "address"
+			}
+		],
+		"name": "addCustomer",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "customerAddress",
+				"type": "address"
+			}
+		],
+		"name": "getDeathDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "customer",
+				"type": "address"
+			},
+			{
+				"name": "burialHash",
+				"type": "string"
+			}
+		],
+		"name": "addBurialPermit",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "customer",
+				"type": "address"
+			},
+			{
+				"name": "certificateHash",
+				"type": "string"
+			}
+		],
+		"name": "issueDeathCertificate",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "customerAddress",
+				"type": "address"
+			}
+		],
+		"name": "requestClaim",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "insurerAddress",
+				"type": "address"
+			}
+		],
+		"name": "addInsurers",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "governingAddress",
+				"type": "address"
+			}
+		],
+		"name": "addGoverning",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "burialAddress",
+				"type": "address"
+			}
+		],
+		"name": "addBurial",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+]
