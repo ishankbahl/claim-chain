@@ -6,7 +6,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd',
   },
   {
     name: 'Matt Giampietro',
@@ -15,7 +17,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd'
   },
   {
     name: 'Matt Giampietro',
@@ -24,7 +28,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd'
   },
   {
     name: 'Matt Giampietro',
@@ -33,7 +39,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd'
   },
   {
     name: 'Matt Giampietro',
@@ -42,7 +50,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd'
   },
   {
     name: 'Matt Giampietro',
@@ -51,7 +61,9 @@ export const data = [
     timeOfDeath: '20/6/12',
     causeOfDeath: 'Murder',
     doctor: 'Dr. BR Ambedkar',
-    hospital: 'HR Hospital'
+    hospital: 'HR Hospital',
+    hospitalHash: '382409880923858098df089',
+    docPublicKey: 'epuewrhdshfowhrhoihfd'
   }
 ];
 
