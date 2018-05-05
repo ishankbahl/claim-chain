@@ -5,23 +5,23 @@ import Stepper, { Step, StepLabel, StepContent } from 'material-ui/Stepper';
 import Button from 'material-ui/Button';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
-import { RequestClaim, BurialSite, SimpleSnackbar } from "../../Components";
+import { RequestClaim, BurialSite, SimpleSnackbar } from '../../Components';
 import Snackbar from 'material-ui/Snackbar';
 
 const styles = theme => ({
-    root: {
-        width: '90%',
-    },
-    button: {
-        marginTop: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-    },
-    actionsContainer: {
-        marginBottom: theme.spacing.unit * 2,
-    },
-    resetContainer: {
-        padding: theme.spacing.unit * 3,
-    },
+  root: {
+    width: '100%'
+  },
+  button: {
+    marginTop: theme.spacing.unit,
+    marginRight: theme.spacing.unit
+  },
+  actionsContainer: {
+    marginBottom: theme.spacing.unit * 2
+  },
+  resetContainer: {
+    padding: theme.spacing.unit * 3
+  }
 });
 
 function getSteps() {
@@ -29,36 +29,33 @@ function getSteps() {
 }
 
 class ClaimStepper extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            activeStep: 0,
-            deceasedPublicKey: "",
-            burialSite: ""
-        };
+  constructor() {
+    super();
+    this.state = {
+      activeStep: 0,
+      deceasedPublicKey: '',
+      burialSite: ''
+    };
 
-        this.changeDeceasedPublicKey = this.changeDeceasedPublicKey.bind(this);
-        this.getStepContent = this.getStepContent.bind(this);
-        this.handleSelect = this.handleSelect.bind(this);
-
-    }
-
-  changeDeceasedPublicKey(obj){
-
-    this.setState(obj);
-
+    this.changeDeceasedPublicKey = this.changeDeceasedPublicKey.bind(this);
+    this.getStepContent = this.getStepContent.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  handleSelect(obj){
+  changeDeceasedPublicKey(obj) {
+    this.setState(obj);
+  }
+
+  handleSelect(obj) {
     this.setState(obj);
   }
 
   getStepContent(step) {
     switch (step) {
       case 0:
-        return (<RequestClaim inputHandler={ this.changeDeceasedPublicKey } />);
+        return <RequestClaim inputHandler={this.changeDeceasedPublicKey} />;
       case 1:
-        return (<BurialSite handleSelect={ this.handleSelect } />);
+        return <BurialSite handleSelect={this.handleSelect} />;
       case 2:
         return `Death Certificate of Deasesed: 23dfsd09q229e898329`;
       default:
@@ -68,19 +65,19 @@ class ClaimStepper extends React.Component {
 
   handleNext = () => {
     this.setState({
-      activeStep: this.state.activeStep + 1,
+      activeStep: this.state.activeStep + 1
     });
   };
 
   handleBack = () => {
     this.setState({
-      activeStep: this.state.activeStep - 1,
+      activeStep: this.state.activeStep - 1
     });
   };
 
   handleReset = () => {
     this.setState({
-      activeStep: 0,
+      activeStep: 0
     });
   };
 
@@ -113,7 +110,9 @@ class ClaimStepper extends React.Component {
                         onClick={this.handleNext}
                         className={classes.button}
                       >
-                        {activeStep === steps.length - 1 ? 'Sign with private key' : 'Next'}
+                        {activeStep === steps.length - 1
+                          ? 'Sign with private key'
+                          : 'Next'}
                       </Button>
                     </div>
                   </div>
@@ -124,7 +123,7 @@ class ClaimStepper extends React.Component {
         </Stepper>
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
-                <Typography>All steps completed - you&quot;re finished</Typography>
+            <Typography>All steps completed - you&quot;re finished</Typography>
             <Button onClick={this.handleReset} className={classes.button}>
               Reset
             </Button>
@@ -136,7 +135,7 @@ class ClaimStepper extends React.Component {
 }
 
 ClaimStepper.propTypes = {
-  classes: PropTypes.object,
+  classes: PropTypes.object
 };
 
 export default withStyles(styles)(ClaimStepper);

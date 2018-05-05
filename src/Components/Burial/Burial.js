@@ -1,20 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import { UploaderComponent } from "../../Components";
-import { data } from "../../data";
+import { UploaderComponent } from '../../Components';
+import { data } from '../../data';
 
-class Burial extends React.Component{
+const style = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around'
+};
 
-    render(){
-
-        return(
-            <div>
-                { data.map((element) => <UploaderComponent details={ element } />) }
-            </div>
-        );
-
-    }
-
-} 
+class Burial extends React.Component {
+  render() {
+    return (
+      <div style={style}>
+        {data.map(element => <UploaderComponent details={element} />)}
+      </div>
+    );
+  }
+}
 
 export default Burial;
