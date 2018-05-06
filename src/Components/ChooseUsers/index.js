@@ -4,7 +4,9 @@ import { userType } from "../../data";
 
 function ChooseUsers(){
     return (
-        <MapData data={ userType } hospital={ false }/>
+        <div style={{ transform: "translateY(9%)" }} >
+            <MapData data={ userType } hospital={ false } />
+        </div>
     );
 }
 

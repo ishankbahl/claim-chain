@@ -4,6 +4,11 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import AccountBalance from "material-ui-icons/AccountBalance";
+import People from "material-ui-icons/People";
+import Work from "material-ui-icons/Work";
+import Accessibility from "material-ui-icons/Accessibility";
+import LocalHospital from "material-ui-icons/LocalHospital";
+import Gavel from "material-ui-icons/Gavel";
 
 const styles = {
   root: {
@@ -37,6 +42,10 @@ function renderIcon(component){
     console.log(component);
     switch(component){
         case "AccountBalance": return (<AccountBalance style={{fontSize: "50px",textAlign: "center"}} />);
+        case "People": return (<People style={{fontSize: "50px",textAlign: "center"}} />);
+        case "Gavel": return (<Gavel style={{fontSize: "50px",textAlign: "center"}} />);
+        case "Accessibility": return (<Accessibility style={{fontSize: "50px",textAlign: "center"}} />);
+        case "LocalHospital": return (<LocalHospital style={{fontSize: "50px",textAlign: "center"}} />);
     }
 }
 
