@@ -6,6 +6,8 @@ import Typography from 'material-ui/Typography';
 import LocalHospital from 'material-ui-icons/LocalHospital';
 import PersonPin from 'material-ui-icons/PersonPin';
 
+import SHA from 'jssha';
+
 import './index.css';
 
 const styles = {
@@ -13,7 +15,7 @@ const styles = {
     maxWidth: '450px',
     margin: '25px',
     width: '356px',
-    height: "350px"
+    height: '350px'
   },
   span: {
     padding: '5px'
@@ -22,6 +24,16 @@ const styles = {
     textDecoration: 'none'
   }
 };
+function makeid() {
+  var text = '';
+  var possible =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
 
 function UploaderComponent(props) {
   const {
@@ -77,8 +89,13 @@ function UploaderComponent(props) {
           <Typography variant="subheading" color="textSecondary">
             <b>Public key of Doc :</b> {docPublicKey}
           </Typography>
-          <div className="uploaderAction" style={buttonStyle}>
-            {'Upload Death Certificate'}
+          <div className="upload-btn-wrapper">
+            <button className="btn">Upload a Death Certificate</button>
+            <input
+              type="file"
+              name="myfile"
+              onChange={e => props.upload(makeid())}
+            />
           </div>
         </CardContent>
       </Card>

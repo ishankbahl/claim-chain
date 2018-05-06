@@ -7,6 +7,7 @@ import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import { RequestClaim, BurialSite, SimpleSnackbar } from '../../Components';
 import Snackbar from 'material-ui/Snackbar';
+import { accounts } from './../../data';
 
 const styles = theme => ({
   root: {
@@ -34,7 +35,8 @@ class ClaimStepper extends React.Component {
     this.state = {
       activeStep: 0,
       deceasedPublicKey: '',
-      burialSite: ''
+      burialSite: '',
+      account: accounts[4]
     };
 
     this.changeDeceasedPublicKey = this.changeDeceasedPublicKey.bind(this);
