@@ -77,21 +77,21 @@ export const userType = [
   {
     name: 'Nominee',
     description: 'Simple claims and processing for nominess to reduce trauma',
-    Component: 'AccountBalance'
+    Component: 'People'
   },
   {
     name: 'Hospital',
     description: 'Simple claims and processing for hospital',
-    Component: 'Hospital'
+    Component: 'LocalHospital'
   },
   {
     name: 'Government Body',
     description: 'Civic bodies cooperate with us fully to make life convenient',
-    Component: 'Government'
+    Component: 'Gavel'
   },
   {
     name: 'Burial Site',
     description: 'Trusted Partners make sure your data is safe and secure',
-    Component: 'Burial'
+    Component: 'Accessibility'
   }
 ];
