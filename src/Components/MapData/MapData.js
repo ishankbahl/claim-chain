@@ -1,8 +1,39 @@
 import React from 'react';
 import { Users, Profile } from '../../Components';
 import PropTypes from 'prop-types';
+import { withRouter } from "react-router-dom";
 
 class MapData extends React.Component {
+
+  constructor(){
+      
+    super();
+
+    this.changeUrl = this.changeUrl.bind(this);
+
+  }
+
+  changeUrl(key){
+
+    const { history } = this.props;
+
+    switch(key){
+
+        case 0: history.push('/insurer');
+                break;
+        case 1: history.push('/nominee');
+                break;
+        case 2: history.push('/hospital');
+                break;
+        case 3: history.push('/government');
+                break;
+        case 4: history.push('/burial');
+                break;
+
+    }
+
+  }
+
   render() {
     const { data, hospital } = this.props;
 
@@ -36,15 +67,17 @@ class MapData extends React.Component {
                 Component={element.Component}
                 description={element.description}
                 key={key}
+                onClick={() => this.changeUrl(key)}
               />
             ))}
       </div>
     );
   }
+
 }
 
 MapData.propTypes = {
   data: PropTypes.array.isRequired
 };
 
-export default MapData;
+export default withRouter(MapData);
