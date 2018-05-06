@@ -5,7 +5,9 @@ import {
   Hospital,
   Navbar,
   ClaimStepper,
-  Burial
+  Burial,
+  Government,
+  Insurer
 } from '../../Components';
 
 import address from '../../utils/claim';
@@ -27,6 +29,8 @@ class Home extends React.Component {
         <Route exact path="/hospital" component={Hospital} />
         <Route exact path="/nominee" component={ClaimStepper} />
         <Route exact path="/burial" component={Burial} />
+        <Route exact path="/government" component={Government} />
+        <Route exact path="/insurer" component={Insurer} />
       </div>
     );
   }

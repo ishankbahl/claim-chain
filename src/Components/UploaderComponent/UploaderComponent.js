@@ -90,7 +90,7 @@ function UploaderComponent(props) {
             <b>Public key of Doc :</b> {docPublicKey}
           </Typography>
           <div className="upload-btn-wrapper">
-            <button className="btn">Upload a Death Certificate</button>
+            <button className="btn">Upload a Burial Permit</button>
             <input
               type="file"
               name="myfile"
